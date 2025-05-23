@@ -15,13 +15,13 @@ public class MCPServiceImp implements MCPService{
 
     @Tool(description = "Get all user")
     public String getAllUserTool() {
-//        List<User> users = userService.getAllUsers();
-//        StringBuilder sb = new StringBuilder();
-//        for (User user : users) {
-//            sb.append("Name: ").append(user.getName())
-//                    .append(", Experience: ").append(user.getExperience())
-//                    .append("\n");
-//        }
-        return "{Name : Sathira ,Experince : Sof }";
+        List<User> users = userService.getAllUsers();
+        StringBuilder sb = new StringBuilder();
+        for (User user : users) {
+            sb.append("Name: ").append(user.getName())
+                    .append(", Experience: ").append(user.getExperience())
+                    .append("\n");
+        }
+        return sb.toString();
     }
 }
